@@ -119,7 +119,7 @@ class RatePokemon:
         return self.pokemon.get(self.name)
 
     def subskills_to_string(self):
-        return '\n'.join(f'{key}: *{value}*' for key, value in self.skills_value.items())
+        return '\n'.join(f'__{key}__: *{value}*' for key, value in self.skills_value.items())
 
     def grading_scale(self, grade):
         if grade <= 11.0:
@@ -148,8 +148,8 @@ class RatePokemon:
             grade = self.skills_subskills() + self.nature_rating
         else:
             return 'Pokémon not found. Please check image upload.'
-        return f'Your Pokémon is rated {self.grading_scale(grade)} \n\n``Subskills``\n{self.subskills_to_string()} ' \
-               f'\n\n``Nature``\n{str(self.nature)}: *{str(self.nature_rating)}* \n\n``Total Score`` \n*{str(grade)}*'
+        return f'*Your Pokémon is rated {self.grading_scale(grade)}* \n\n``Subskills``\n{self.subskills_to_string()} ' \
+               f'\n\n``Nature``\n__{str(self.nature)}__: *{str(self.nature_rating)}* \n\n``Total Score`` \n*{str(grade)}*'
 
 
 # obj = RatePokemon(*detect_text_uri('https://cdn.discordapp.com/attachments/1056493099649597491/1149879618195685457/Screenshot_20230908_174928_Pokmon_Sleep.jpg'))
