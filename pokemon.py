@@ -115,25 +115,25 @@ class RatePokemon:
                 self.nature = item
             if item in self.subskills:
                 self.skills.append(item)
-        print(self.name, self.nature, self.skills)
+        print('!')
         return self.pokemon.get(self.name)
 
     def subskills_to_string(self):
-        return '\n'.join(f'__{key}__: *{value}*' for key, value in self.skills_value.items())
+        return '\n'.join(f'__{key}__: {value}' for key, value in self.skills_value.items())
 
     def grading_scale(self, grade):
         if grade <= 11.0:
             return '**F**! <:imheeout:459249961310093316>'
-        elif 12.0 <= grade <= 14.0:
+        elif 11.0 < grade <= 14.0:
             return '**D**! <:thisisfine:835775058969362472>'
-        elif 15.0 <= grade <= 17.0:
+        elif 14.0 < grade <= 17.0:
             return '**C**! <:gigi:829096353173864508>'
-        elif 18.0 <= grade <= 20.0:
+        elif 17.0 < grade <= 20.0:
             return '**B**! <:ricekek:644009566622842921>'
-        elif 21.0 <= grade <= 23.0:
+        elif 20.0 < grade <= 23.0:
             return '**A**! <:thumbsupcat:424037436725788673>'
         else:
-            return '**S+**! <:index:588105844072251392>'
+            return '**S**! <:index:588105844072251392>'
 
     def rate_pokemon(self, results):
         specialty = self.get_specialty(results)
@@ -149,7 +149,7 @@ class RatePokemon:
         else:
             return 'Pokémon not found. Please check image upload.'
         return f'*Your Pokémon is rated {self.grading_scale(grade)}* \n\n``Subskills``\n{self.subskills_to_string()} ' \
-               f'\n\n``Nature``\n__{str(self.nature)}__: *{str(self.nature_rating)}* \n\n``Total Score`` \n*{str(grade)}*'
+               f'\n\n``Nature``\n__{str(self.nature)}__: {str(self.nature_rating)} \n\n``Total Score`` \n{str(grade)}'
 
 
 # obj = RatePokemon(*detect_text_uri('https://cdn.discordapp.com/attachments/1056493099649597491/1149879618195685457/Screenshot_20230908_174928_Pokmon_Sleep.jpg'))

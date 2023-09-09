@@ -25,5 +25,5 @@ def detect_text_uri(uri):
     return results
 
 
-print(detect_text_uri(
-    'https://cdn.discordapp.com/attachments/1149992767049711636/1150037159504515153/Screenshot_20230909_023652_Pokmon_Sleep.jpg'))
+# print(detect_text_uri(
+#     'https://cdn.discordapp.com/attachments/1149992767049711636/1150037159504515153/Screenshot_20230909_023652_Pokmon_Sleep.jpg'))
