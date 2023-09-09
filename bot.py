@@ -1,6 +1,5 @@
 import config
 import discord
-import crop
 from pokemon import RatePokemon
 from ocr import detect_text_uri
 
@@ -11,13 +10,13 @@ class PokemonSleepRatingBot(discord.Client):
         if message.author.id == self.user.id:
             return
 
-        if message.content.startswith('!rate'):
+        if message.content.startswith('!rateps'):
             if message.attachments and any(
                     att.filename.endswith(('.png', '.jpg', '.jpeg')) for att in message.attachments):
                 # pokemon, nature, skills = detect_text_uri(message.attachments[0].url)
                 # obj = RatePokemon(pokemon, nature, skills)
                 # print(obj.rate_pokemon())
-                await message.reply(RatePokemon(*detect_text_uri(message.attachments[0].url)).rate_pokemon())
+                await message.reply(RatePokemon().rate_pokemon(detect_text_uri(message.attachments[0].url)))
 
 
 intents = discord.Intents.default()

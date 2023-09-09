@@ -76,50 +76,67 @@ class RatePokemon:
                  'Skill Trigger S': [3, 3, 4], 'Skill Trigger M': [4, 4, 5],
                  'Sleep EXP Bonus': [3, 3, 3]}
 
-    def __init__(self, name, nature, skills):
+    def __init__(self, name='', nature='', skills=None):
         self.name = name
         self.nature = nature
+        if skills is None:
+            skills = []
         self.skills = skills
         self.nature_rating = 0
         self.skills_rating = 0
+        self.skills_value = {}
 
     def get_stats(self):
         print(self.name, self.nature, self.skills)
 
     def berries_subskills(self):
         for i in self.skills:
+            self.skills_value[i] = RatePokemon.subskills[i][0]
             self.skills_rating += RatePokemon.subskills[i][0]
         return self.skills_rating
 
     def ingredients_subskills(self):
         for i in self.skills:
+            self.skills_value[i] = RatePokemon.subskills[i][1]
             self.skills_rating += RatePokemon.subskills[i][1]
         return self.skills_rating
 
     def skills_subskills(self):
         for i in self.skills:
+            self.skills_value[i] = RatePokemon.subskills[i][2]
             self.skills_rating += RatePokemon.subskills[i][2]
         return self.skills_rating
 
-    def get_specialty(self):
-        return RatePokemon.pokemon.get(self.name)
+    def get_specialty(self, results):
+        for item in results:
+            if item in self.pokemon:
+                self.name = item
+            if item in self.natures:
+                self.nature = item
+            if item in self.subskills:
+                self.skills.append(item)
+        print(self.name, self.nature, self.skills)
+        return self.pokemon.get(self.name)
+
+    def subskills_to_string(self):
+        return '\n'.join(f'{key}: *{value}*' for key, value in self.skills_value.items())
 
     def grading_scale(self, grade):
         if grade <= 11.0:
-            return 'F! <:imheeout:459249961310093316>'
+            return '**F**! <:imheeout:459249961310093316>'
         elif 12.0 <= grade <= 14.0:
-            return 'D! <:thisisfine:835775058969362472>'
+            return '**D**! <:thisisfine:835775058969362472>'
         elif 15.0 <= grade <= 17.0:
-            return 'C! <:gigi:829096353173864508>'
+            return '**C**! <:gigi:829096353173864508>'
         elif 18.0 <= grade <= 20.0:
-            return 'B! <:ricekek:644009566622842921>'
+            return '**B**! <:ricekek:644009566622842921>'
         elif 21.0 <= grade <= 23.0:
-            return 'A! <:thumbsupcat:424037436725788673>'
+            return '**A**! <:thumbsupcat:424037436725788673>'
         else:
-            return 'S+! <:index:588105844072251392>'
+            return '**S+**! <:index:588105844072251392>'
 
-    def rate_pokemon(self):
-        specialty = self.get_specialty()
+    def rate_pokemon(self, results):
+        specialty = self.get_specialty(results)
         if specialty == 'Berries':
             self.nature_rating = RatePokemon.natures[self.nature][0]
             grade = self.berries_subskills() + self.nature_rating
@@ -131,9 +148,8 @@ class RatePokemon:
             grade = self.skills_subskills() + self.nature_rating
         else:
             return 'Pokémon not found. Please check image upload.'
-        return 'Your Pokémon is rated ' + self.grading_scale(grade) + '\nSubskills: ' \
-            + str(self.skills_rating) + ' + Nature: ' + str(self.nature_rating) + ' = ' + str(grade)
-
+        return f'Your Pokémon is rated {self.grading_scale(grade)} \n\n``Subskills``\n{self.subskills_to_string()} ' \
+               f'\n\n``Nature``\n{str(self.nature)}: *{str(self.nature_rating)}* \n\n``Total Score`` \n*{str(grade)}*'
 
 
 # obj = RatePokemon(*detect_text_uri('https://cdn.discordapp.com/attachments/1056493099649597491/1149879618195685457/Screenshot_20230908_174928_Pokmon_Sleep.jpg'))
@@ -143,3 +159,8 @@ class RatePokemon:
 # obj = RatePokemon(name, nature, skills)
 #
 # print(obj.rate_pokemon())
+
+# results = ['Frequency', 'Lv. 10', 'Main Skill & Sub Skills', 'ⒸLv. 50', 'Ingredient Finder S', 'RP 389', 'Swablu', 'Lv. 100', 'Inventory Up S', 'Charge Energy S', 'Restores 12 Energy to the user.', 'Helping Speed S', 'Nature', 'Additional Stats', 'Back', 'Adamant', 'Date Met', 'Every 1 hr 2 mins 14 secs', 'Place Met', 'Sleeping Time Shared', 'Lv. 25', 'Energy Recovery Bonus', 'ⒸLV. 75', 'Skill Trigger S', 'Speed of help ▲▲', 'Ingredient finding', 'Lv.1', 'August 31, 2023', 'Greengrass Isle', 'Zzz 12 hrs 10 mins', '|||']
+#
+# obj = RatePokemon()
+# print(obj.rate_pokemon(results))
