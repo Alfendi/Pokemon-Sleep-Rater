@@ -123,17 +123,17 @@ class RatePokemon:
 
     def grading_scale(self, grade):
         if grade <= 11.0:
-            return '**F**! <:imheeout:459249961310093316>'
+            return '**F**! <:torchheadbang:1150206226181918720>'
         elif 11.0 < grade <= 14.0:
-            return '**D**! <:thisisfine:835775058969362472>'
+            return '**D**! <:psyduck:1150207071468388432>'
         elif 14.0 < grade <= 17.0:
-            return '**C**! <:gigi:829096353173864508>'
+            return '**C**! <:flushedtomb:1150206887812419665>'
         elif 17.0 < grade <= 20.0:
-            return '**B**! <:ricekek:644009566622842921>'
+            return '**B**! <:squirtlevibe:846398895666888727>'
         elif 20.0 < grade <= 23.0:
-            return '**A**! <:thumbsupcat:424037436725788673>'
+            return '**A**! <:raichudab:1150207082390368388>'
         else:
-            return '**S**! <:index:588105844072251392>'
+            return '**S**! <:gengarshades:1150207094297997332>'
 
     def rate_pokemon(self, results):
         specialty = self.get_specialty(results)
