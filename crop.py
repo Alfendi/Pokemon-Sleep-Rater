@@ -36,29 +36,27 @@ def crop_image(url):
     crop_skill_5 = (99, 1158, 501, 1223)
     skill_5_img = img_resized.crop(crop_skill_5)
 
-    # cropped_img.show()
     images = [name_img, nature_img, skill_1_img, skill_2_img, skill_3_img, skill_4_img, skill_5_img]
     cropped = combine_images(images)
+    # cropped.show()
     with BytesIO() as f:
         cropped.save(f, format='JPEG')
         return f.getvalue()
 
 
-
 def combine_images(images):
-    # Get individual image dimensions
     widths, heights = zip(*(i.size for i in images))
 
-    # Determine the size of the merged image
-    total_width = sum(widths)
-    max_height = max(heights)
+    total_height = sum(heights)
+    max_width = max(widths)
 
-    # Create an empty image with the determined size
-    new_img = Image.new('RGB', (total_width, max_height))
+    new_img = Image.new('RGB', (max_width, total_height))
 
-    x_offset = 0
+    y_offset = 0
     for img in images:
-        new_img.paste(img, (x_offset, 0))
-        x_offset += img.width
+        new_img.paste(img, (0, y_offset))
+        y_offset += img.height
 
     return new_img
+
+# crop_image('https://cdn.discordapp.com/attachments/1149992767049711636/1150037159504515153/Screenshot_20230909_023652_Pokmon_Sleep.jpg')

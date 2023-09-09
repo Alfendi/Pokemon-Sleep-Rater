@@ -28,5 +28,5 @@ def detect_text_uri(uri):
     print(pokemon, nature, skills)
     return pokemon, nature, skills
 
-detect_text_uri('https://cdn.discordapp.com/attachments/1056493099649597491/1149879618195685457/Screenshot_20230908_174928_Pokmon_Sleep.jpg')
+# detect_text_uri('https://cdn.discordapp.com/attachments/1149992767049711636/1150037159504515153/Screenshot_20230909_023652_Pokmon_Sleep.jpg')
 
