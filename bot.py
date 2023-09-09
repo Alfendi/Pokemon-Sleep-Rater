@@ -1,5 +1,6 @@
 import config
 import discord
+import crop
 from pokemon import RatePokemon
 from ocr import detect_text_uri
 
