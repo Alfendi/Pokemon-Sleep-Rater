@@ -119,17 +119,26 @@ class RatePokemon:
         return self.pokemon.get(self.name)
 
     def subskills_to_string(self):
-        return '\n'.join(f'__{key}__: {value}' for key, value in self.skills_value.items())
+        order = [0, 3, 1, 4, 2]
+        prefixes = ["[Lv. 10]", "[Lv. 25]", "[Lv. 50]", "[Lv. 75]", "[Lv. 100]"]
+        keys_list = list(self.skills_value.keys())
+
+        formatted_output = []
+        for i, idx in enumerate(order):
+            key = keys_list[idx]
+            formatted_output.append(f'{prefixes[i]} __{key}__: {self.skills_value[key]}')
+
+        return '\n'.join(formatted_output)
 
     def grading_scale(self, grade):
         if grade <= 11.0:
-            return '**F**! <:torchheadbang:1150206226181918720>'
+            return '**F**! <a:torchheadbang:1150206226181918720>'
         elif 11.0 < grade <= 14.0:
             return '**D**! <:psyduck:1150207071468388432>'
         elif 14.0 < grade <= 17.0:
             return '**C**! <:flushedtomb:1150206887812419665>'
         elif 17.0 < grade <= 20.0:
-            return '**B**! <:squirtlevibe:846398895666888727>'
+            return '**B**! <a:squirtlevibe:1150206216451137586>'
         elif 20.0 < grade <= 23.0:
             return '**A**! <:raichudab:1150207082390368388>'
         else:
