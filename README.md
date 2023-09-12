@@ -15,7 +15,7 @@ Scores for the subskills are credited to u/drake8thecake's top tier spreadsheet.
   <img src="https://i.imgur.com/ZLEUsjJ.png">
 </p>
 
-Scores for the nature are an aggregation from three different sources including u/PigsInTrees, u/drake8thecake, and the Discord [Sleep Mathcord](https://discord.gg/mphzREMkwe) calculated by SaintPebble.
+Scores for the nature are an aggregation calculated by SaintPebble from three different sources including u/PigsInTrees, u/drake8thecake, and the Discord [Sleep Mathcord](https://discord.gg/mphzREMkwe).
 
 The bot combines all the raw scores and rates it on a grading scale proposed by SaintPebble. At the moment, it is:
 
