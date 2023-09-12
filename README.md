@@ -36,7 +36,6 @@ The scale accounts for the varying min/max values of the three specialties: Berr
 I realise that this grading scale as well as the values of each subskill and nature are highly subjective. I'd love to hear any opinions, suggestions, or changes that you may have—whether it be regarding the bot or the code @ Alfendi on Discord. Many thanks!
 
 # Links
-
 - SaintPebble's spreadsheet: [Link](https://docs.google.com/spreadsheets/d/1HSEzTWlboKHFOV7piqsk82E1Wapa9J-dQmOOdY8RNJY/edit?usp=sharing)
 - /u/drake8thecake's spreadsheet: [Link](https://www.reddit.com/r/PokemonSleep/comments/167tiuz/updated_pokemon_sleep_data_and_tier_list_incl/?rdt=39154)
 - /u/PigsInTrees's infographic: [Link](https://www.reddit.com/r/PokemonSleep/comments/15wkab7/pigs_made_a_nature_infograph/)
@@ -45,4 +44,4 @@ I realise that this grading scale as well as the values of each subskill and nat
 
 # Change Log
 
-v1.0 Released.
+v1.0 Released
