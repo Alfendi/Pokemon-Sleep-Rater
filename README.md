@@ -1,4 +1,4 @@
-# Pokemon-Sleep-Rating-Bot
+# Pokémon Sleep Rater Discord Bot
 A Discord bot that rates Pokémon from Pokémon Sleep! All you need to do is invite the bot to your server (link below) and use the command <i>!rateps</i> when you upload a screenshot. Be sure the screenshot contains the Pokémon's name (no nicknames, sorry!), nature, and subskills. The bot may fail if a screenshot is unclear.
 
 <i>Currently awaiting Discord verification to join more servers!</i>
