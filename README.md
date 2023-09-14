@@ -6,7 +6,7 @@ A Discord bot that rates Pokémon from Pokémon Sleep! All you need to do is inv
 <p align="center">Example Output:</p>
 
 <p align="center">
-  <img src="https://i.imgur.com/37ebfgb.png">
+  <img src="https://i.imgur.com/dSDM6rh.png">
 </p>
 
 Scores for the subskills are credited to u/drake8thecake's top tier spreadsheet. Each Pokémon is graded differently according to their specialty.
