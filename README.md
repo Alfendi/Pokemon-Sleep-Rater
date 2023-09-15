@@ -44,4 +44,4 @@ I realise that this grading scale as well as the values of each subskill and nat
 
 # Change Log
 - v1.0 Released
-- v1.1 Update: Added Mimes, changed library from discord.py to pycord, changed command from !rateps to /rateps, updated final evaluation look, added error validation, set-up PostgreSQL Cloud connection.
+- v1.1 Update
