@@ -33,7 +33,7 @@ F: 11 and under
 
 The scale accounts for the varying min/max values of the three specialties: Berries: 6 — 25, Ingredients 11 — 24, and Skills 10.5 — 26. Accordingly, a Pokémon's specialty is the first value to be considered then rated in the proper category. All emojis used in the bot's final evaluation belong to their respective creators.
 
-I realise that this grading scale as well as the values of each subskill and nature are highly subjective. I'd love to hear any opinions, suggestions, or changes that you may have—whether it be regarding the bot or the code @ Alfendi on Discord. Many thanks!
+I realise that this grading scale as well as the values of each subskill and nature are highly subjective. I'd love to hear any opinions, suggestions, or changes that you may have—whether it be regarding the bot or the code @ alfendi on Discord. Many thanks!
 
 # Links
 - SaintPebble's spreadsheet: [Link](https://docs.google.com/spreadsheets/d/1HSEzTWlboKHFOV7piqsk82E1Wapa9J-dQmOOdY8RNJY/edit?usp=sharing)
@@ -45,3 +45,4 @@ I realise that this grading scale as well as the values of each subskill and nat
 # Change Log
 
 v1.0 Released
+v1.1 Update: Added Mimes, changed library from discord.py to pycord, changed command from !rateps to /rateps, updated final evaluation look, added error validation, set-up PostgreSQL Cloud connection.
