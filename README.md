@@ -43,5 +43,5 @@ I realise that this grading scale as well as the values of each subskill and nat
 - Reddit Post: [Link](https://www.reddit.com/r/PokemonSleep/comments/16eiidw/i_made_a_pok%C3%A9mon_sleep_rating_discord_bot/)
 
 # Change Log
-- v1.0 Released
-- v1.1 Update
+- v1.0 Released (9/9/23)
+- v1.1 Update (9/14/23)
