@@ -33,7 +33,7 @@ F: 11 and under
 
 The scale accounts for the varying min/max values of the three specialties: Berries: 6 — 25, Ingredients 11 — 24, and Skills 10.5 — 26. Accordingly, a Pokémon's specialty is the first value to be considered then rated in the proper category. All emojis used in the bot's final evaluation belong to their respective creators.
 
-I realise that this grading scale as well as the values of each subskill and nature are highly subjective. I'd love to hear any opinions, suggestions, or changes that you may have—whether it be regarding the bot or the code @ Alfendi on Discord. Many thanks!
+I realise that this grading scale as well as the values of each subskill and nature are highly subjective. I'd love to hear any opinions, suggestions, or changes that you may have—whether it be regarding the bot or the code @ alfendi on Discord. Many thanks!
 
 # Links
 - SaintPebble's spreadsheet: [Link](https://docs.google.com/spreadsheets/d/1HSEzTWlboKHFOV7piqsk82E1Wapa9J-dQmOOdY8RNJY/edit?usp=sharing)
@@ -41,7 +41,8 @@ I realise that this grading scale as well as the values of each subskill and nat
 - /u/PigsInTrees's infographic: [Link](https://www.reddit.com/r/PokemonSleep/comments/15wkab7/pigs_made_a_nature_infograph/)
 - Bot Invite: [Link](https://discord.com/oauth2/authorize?client_id=1148461688690069628&permissions=412317240384&scope=bot)
 - Reddit Post: [Link](https://www.reddit.com/r/PokemonSleep/comments/16eiidw/i_made_a_pok%C3%A9mon_sleep_rating_discord_bot/)
+- Reddit Post Update (v1.1): [Link](https://www.reddit.com/r/PokemonSleep/comments/16igq7u/feedback_appreciated_an_update_to_the_pok%C3%A9mon/)
 
 # Change Log
-
-v1.0 Released
+- v1.0 Released (9/9/23)
+- v1.1 Update (9/14/23)
