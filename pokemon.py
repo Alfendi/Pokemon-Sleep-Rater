@@ -51,7 +51,9 @@ class RatePokemon:
                'Magnezone': 'Skills',
                'Togekiss': 'Skills',
                'Leafeon': 'Skills', 'Glaceon': 'Skills', 'Sylveon': 'Skills',
-               'Mime Jr.': 'Ingredients', 'Mr. Mime': 'Ingredients'}
+               'Mime Jr.': 'Ingredients', 'Mr. Mime': 'Ingredients',
+               'Cleffa': 'Berries', 'Clefairy': 'Berries', 'Clefable': 'Berries'
+               }
 
     # Nature rated by category. [0] = Berries, [1] = Ingredients, [2] = Skills.
     natures = {'Hardy': [1.00, 1.00, 1.00], 'Lonely': [1.00, 1.00, 0.67], 'Brave': [1.67, 1.67, 1.67],
