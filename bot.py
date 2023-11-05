@@ -1,6 +1,6 @@
 import discord
 import os
-import db
+from pokemon_db import db
 from dotenv import load_dotenv
 from pokemon import RatePokemon
 from ocr import detect_text_uri
