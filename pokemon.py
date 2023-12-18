@@ -53,7 +53,10 @@ class RatePokemon:
                'Leafeon': 'Skills', 'Glaceon': 'Skills', 'Sylveon': 'Skills',
                'Mime Jr.': 'Ingredients', 'Mr. Mime': 'Ingredients',
                'Cleffa': 'Berries', 'Clefairy': 'Berries', 'Clefable': 'Berries',
-               'Shuppet': 'Berries', 'Banette': 'Berries'
+               'Shuppet': 'Berries', 'Banette': 'Berries',
+               'Onix': 'Berries', 'Steelix': 'Berries',
+               'Delibird': 'Ingredients',
+               'Snover': 'Ingredients', 'Abomasnow': 'Ingredients'
                }
 
     # Nature rated by category. [0] = Berries, [1] = Ingredients, [2] = Skills.
